@@ -1,0 +1,186 @@
+---
+import Shell from "@layouts/Shell.astro";
+import BlogFeed from "@components/BlogFeed.astro";
+import Sponsors from "@components/Sponsors.astro";
+import { config } from "../../config";
+import { Strip, Col, Row, Card, Button } from "@canonical/react-components";
+import uca24logo from "@assets/logo.svg";
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
+export function getStaticPaths() {
+	return [{ params: { lang: "en" } }, { params: { lang: "ko" } }];
+}
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Shell>
+    <Strip type="accent" element="section" includeCol={false}>
+        <Row>
+            <Col size={3} />
+            <Col size={9}>
+                <p class="p-heading--2">{config.siteTitle}</p>
+            </Col>
+        </Row>
+        <Row>
+            <Col size={3}>
+                <img src={uca24logo.src} alt="" width="200" />
+            </Col>
+            <Col size={9}>
+                <p>
+                    The 4th edition of UbuCon (Ubuntu Conference) Asia to be
+                    held in JECRC University, Jaipur, India from August 31st to
+                    September 2nd
+                </p>
+                <p><small>{t("home.venuetbd")}</small></p>
+            </Col>
+        </Row>
+        <Row>
+            <Col size={3} />
+            <Col size={9}>
+                <hr />
+                <a href="#" class="p-button--positive">About the event</a>
+                <a href="mailto:sponsorship@ubucon.asia" class="p-button"
+                    >Interested to sponsor us?</a
+                >
+            </Col>
+        </Row>
+        <Row>
+            <Col size={12}>
+                <div class="p-suru is-dark"></div>
+            </Col>
+        </Row>
+    </Strip>
+    <BlogFeed />
+    <Strip bordered>
+        <h4>Featured speakers</h4>
+        <Row>
+            <Col size={4} medium={3}>
+                <div class="p-media-object--large">
+                    <img
+                        src={uca24logo.src}
+                        class="p-media-object__image"
+                        alt=""
+                    />
+                    <div class="p-media-object__details">
+                        <h2 class="p-media-object__title">John Doe</h2>
+                        <p class="p-media-object__content">
+                            Lorem ipsum dolor sit amet
+                        </p>
+                        <ul class="p-media-object__meta-list"></ul>
+                    </div>
+                </div>
+            </Col>
+            <Col size={4} medium={3}>
+                <div class="p-media-object--large">
+                    <img
+                        src={uca24logo.src}
+                        class="p-media-object__image"
+                        alt=""
+                    />
+                    <div class="p-media-object__details">
+                        <h2 class="p-media-object__title">John Doe</h2>
+                        <p class="p-media-object__content">
+                            Lorem ipsum dolor sit amet
+                        </p>
+                        <ul class="p-media-object__meta-list"></ul>
+                    </div>
+                </div>
+            </Col>
+            <Col size={4} medium={3}>
+                <div class="p-media-object--large">
+                    <img
+                        src={uca24logo.src}
+                        class="p-media-object__image"
+                        alt=""
+                    />
+                    <div class="p-media-object__details">
+                        <h2 class="p-media-object__title">John Doe</h2>
+                        <p class="p-media-object__content">
+                            Lorem ipsum dolor sit amet
+                        </p>
+                        <ul class="p-media-object__meta-list"></ul>
+                    </div>
+                </div>
+            </Col>
+            <Col size={4} medium={3}>
+                <div class="p-media-object--large">
+                    <img
+                        src={uca24logo.src}
+                        class="p-media-object__image"
+                        alt=""
+                    />
+                    <div class="p-media-object__details">
+                        <h2 class="p-media-object__title">John Doe</h2>
+                        <p class="p-media-object__content">
+                            Lorem ipsum dolor sit amet
+                        </p>
+                        <ul class="p-media-object__meta-list"></ul>
+                    </div>
+                </div>
+            </Col>
+            <Col size={4} medium={3}>
+                <div class="p-media-object--large">
+                    <img
+                        src={uca24logo.src}
+                        class="p-media-object__image"
+                        alt=""
+                    />
+                    <div class="p-media-object__details">
+                        <h2 class="p-media-object__title">John Doe</h2>
+                        <p class="p-media-object__content">
+                            Lorem ipsum dolor sit amet
+                        </p>
+                        <ul class="p-media-object__meta-list"></ul>
+                    </div>
+                </div>
+            </Col>
+            <Col size={4} medium={3}>
+                <div class="p-media-object--large">
+                    <img
+                        src={uca24logo.src}
+                        class="p-media-object__image"
+                        alt=""
+                    />
+                    <div class="p-media-object__details">
+                        <h2 class="p-media-object__title">John Doe</h2>
+                        <p class="p-media-object__content">
+                            Lorem ipsum dolor sit amet
+                        </p>
+                        <ul class="p-media-object__meta-list"></ul>
+                    </div>
+                </div>
+            </Col>
+        </Row>
+        <Row>
+            <Col size={12}>
+                <a href="" class="p-button">View more speakers</a>
+            </Col>
+        </Row>
+    </Strip>
+    <section
+        class="p-strip--image is-light"
+        style={{
+            backgroundImage: `url('${config.cityBanner.image}') `,
+            backgroundSize: "cover",
+            backgroundPosition: "center center",
+        }}
+    >
+        <Row>
+            <Col size={6} emptyLarge={7}>
+                <Card title={config.cityBanner.title} overlay>
+                    <p>{config.cityBanner.description}</p>
+                    {
+                        config.cityBanner.buttons.map((item) => (
+                            <Button element="a" href={item.url}>
+                                {item.label}
+                            </Button>
+                        ))
+                    }
+                </Card>
+            </Col>
+        </Row>
+    </section>
+    <Sponsors/>
+</Shell>
+
+<style></style>

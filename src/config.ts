@@ -4,15 +4,18 @@ import OSCollectiveLogo from "@assets/oscollective.webp";
 import JaipurPhoto from "@assets/jaipur.jpg"
 
 export const config = {
-    siteTitle: "UbuCon Asia 2024",
-    siteDescription: "JECRC University, Jaipur, India | August 31st - September 2nd",
+    siteTitle: "UbuCon Korea 2024",
+    siteDescription: "Microsoft Korea, Seoul, South Korea | August 10th",
+    socialMedia: {
+        twitter: "UbuntuKrOrg"
+    },
     blog: {
         rssFeedUrl: "https://blog.ubucon.asia/tags/uca24/index.xml",
         viewMoreUrl: "https://blog.ubucon.asia/tags/uca24"
     },
     cityBanner: {
         title: "Let's meet in the pink city of innovation!",
-        description: 'Learn about the Jaipur, India the city where UbuCon Asia 2024 will be held. And plan your trip today!',
+        description: 'Learn about the Jaipur, India the city where UbuCon Korea 2024 will be held. And plan your trip today!',
         image: JaipurPhoto.src,
         buttons: [
             {
@@ -30,13 +33,11 @@ export const config = {
         ]
     },
     footer: {
-        copyright: "© 2024-Present UbuCon Asia Committee. Ubuntu and Canonical are registered trademarks of Canonical Ltd. Unless otherwise noted, content licensed under CC BY 4.0 source code under MIT.",
+        copyright: "© 2024-Present Ubuntu Korea Community. Ubuntu and Canonical are registered trademarks of Canonical Ltd. Unless otherwise noted, content licensed under CC BY 4.0 source code under MIT.",
         contactUs: "mailto:contact@ubucon.asia",
         srcRepoUrl: "https://github.com/ubucon-asia/2024.ubucon.asia",
         organizers: [
-            { name: "Ubuntu India", logoImage: UbuntuIndiaLogo.src, link: "https://discourse.ubuntu.com/t/ubuntu-india-local-community-ubuntu-in/39994" },
-            { name: "UbuCon Asia Committee", logoImage: UbuConAsiaCommitteeLogo.src, link: "https://www.ubucon.asia" },
-            { name: "Open Source Collective", logoImage: OSCollectiveLogo.src, link: "https://www.oscollective.org/" }
+            { name: "Ubuntu Korea Community", logoImage: UbuntuIndiaLogo.src, link: "https://ubuntu-kr.org" }
         ]
     },
     navigation: [
