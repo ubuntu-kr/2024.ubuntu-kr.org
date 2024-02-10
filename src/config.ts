@@ -1,6 +1,4 @@
-import UbuntuIndiaLogo from "@assets/UbuntuIndia.svg"
-import UbuConAsiaCommitteeLogo from "@assets/UbuConAsiaCommittee.svg"
-import OSCollectiveLogo from "@assets/oscollective.webp";
+import UbuntuKoreaLogo from "@assets/UbuntuKorea.svg"
 import JaipurPhoto from "@assets/jaipur.jpg"
 
 export const config = {
@@ -34,10 +32,10 @@ export const config = {
     },
     footer: {
         copyright: "© 2024-Present Ubuntu Korea Community. Ubuntu and Canonical are registered trademarks of Canonical Ltd. Unless otherwise noted, content licensed under CC BY 4.0 source code under MIT.",
-        contactUs: "mailto:contact@ubucon.asia",
-        srcRepoUrl: "https://github.com/ubucon-asia/2024.ubucon.asia",
+        contactUs: "mailto:contact@ubuntu-kr.org",
+        srcRepoUrl: "https://github.com/ubuntu-kr/2024.ubuntu-kr.org",
         organizers: [
-            { name: "Ubuntu Korea Community", logoImage: UbuntuIndiaLogo.src, link: "https://ubuntu-kr.org" }
+            { name: "Ubuntu Korea Community", logoImage: UbuntuKoreaLogo.src, link: "https://ubuntu-kr.org" }
         ]
     },
     navigation: [
