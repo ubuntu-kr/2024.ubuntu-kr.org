@@ -36,11 +36,11 @@ export const config = {
         return [
             {
                 label: t('nav.about'),
-                url: '/about'
+                url: `/${locale}/about`
             },
             {
                 label: t('nav.venue'),
-                url: '/venue-and-travel/venue-and-safety'
+                url: `/${locale}/venue-and-safety`
             },
             {
                 label: 'Programs',
