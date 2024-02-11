@@ -2,10 +2,13 @@
 import { sponsors } from "@data/sponsors";
 import { Strip, Col, Row } from "@canonical/react-components";
 import SponsorLogoAndModal from "@components/SponsorLogoAndModal.tsx";
+import { useTranslations, getLangFromUrl } from "@i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <Strip type="light">
-    <h2>Our Sponsors</h2>
+    <h2>{t("nav.sponsors.list")}</h2>
     {
         sponsors.map((level) => (
             <>
@@ -31,6 +34,7 @@ import SponsorLogoAndModal from "@components/SponsorLogoAndModal.tsx";
                                         description={item.description}
                                         url={item.url}
                                         level={level.sponsorLevelName}
+                                        locale={lang}
                                         client:only="react"
                                     />
                                 </Col>

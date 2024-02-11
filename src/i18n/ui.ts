@@ -16,7 +16,12 @@ export const languages = {
       'cityBanner.title': 'Let\'s meet at Microsoft Korea near Gwanghwamoon Gate!',
       'cityBanner.description': 'Learn how to get to the venue, Available facilities and our event floor plan',
       'nav.venue': 'Venue & Safety',
-      'nav.about': 'About'
+      'nav.about': 'About',
+      'nav.sponsors': 'Sponsors/Patrons',
+      'nav.sponsors.join': 'Become a sponsor',
+      'nav.sponsors.list': 'Our sponsors',
+      'sponsor.about': 'About the sponsor',
+      'sponsor.website': 'Visit website'
     },
     ko: {
       'home.tagline': '두번째 UbuCon Korea는 작년과 동일한 장소인 한국마이크로소프트에서 8월 10일에 개최될 예정입니다. "Deploy with Ubuntu"를 테마로 다양한 세션이 준비 될 예정입니다.',
@@ -27,6 +32,11 @@ export const languages = {
       'cityBanner.title': '광화문 근처에 위치한 한국마이크로소프트에서 만나요!',
       'cityBanner.description': '행사장 오시는 길, 내부 이용 가능 시설 및 행사 당일 행사장 구성 등에 대해 알아보세요',
       'nav.venue': '행사장 & 안전정보',
-      'nav.about': '소개'
+      'nav.about': '소개',
+      'nav.sponsors': '후원사/개인후원',
+      'nav.sponsors.join': '후원사 등록 안내',
+      'nav.sponsors.list': '참여 후원사',
+      'sponsor.about': '후원사 소개',
+      'sponsor.website': '웹사이트 방문'
     },
   } as const;

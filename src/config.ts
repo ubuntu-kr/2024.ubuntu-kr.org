@@ -64,15 +64,15 @@ export const config = {
                 ]
             },
             {
-                label: 'Sponsors/Patrons',
+                label: t('nav.sponsors'),
                 items: [
                     {
-                        label: 'Become a sponsor',
-                        url: '/sponsors/become-a-sponsor'
+                        label: t('nav.sponsors.join'),
+                        url: `/${locale}/sponsors/become-a-sponsor`
                     },
                     {
-                        label: 'Our sponsors',
-                        url: '/sponsors/our-sponsors'
+                        label: t('nav.sponsors.list'),
+                        url: `/${locale}/sponsors/our-sponsors`
                     }
                 ]
             },

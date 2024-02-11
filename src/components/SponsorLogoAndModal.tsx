@@ -1,22 +1,24 @@
 import { Button, Modal } from "@canonical/react-components";
 import { useState } from "react";
-
+import { useTranslations } from "@i18n/utils";
 type SponsorLogoAndModalProps = {
     name: string,
     level: string,
     logoImageSrc: string,
     description: string,
     url: string,
+    locale: string
 }
 export default function SponsorLogoAndModal(props: SponsorLogoAndModalProps) {
     const [modalOpen, setModalOpen] = useState(false);
     const closeHandler = () => setModalOpen(false);
+    const t = useTranslations(props.locale);
     return (
         <>
             <img src={props.logoImageSrc} alt={props.name} onClick={() => setModalOpen(true)} />
-            {modalOpen ? <Modal close={closeHandler} title="About the sponsor" buttonRow={<>
+            {modalOpen ? <Modal close={closeHandler} title={t('sponsor.about')} buttonRow={<>
                 <Button appearance="positive" element="a" href={props.url}>
-                    Visit website
+                    {t('sponsor.website')}
                 </Button>
             </>}>
                 <img src={props.logoImageSrc} alt={props.name} />
