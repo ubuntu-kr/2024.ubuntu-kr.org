@@ -1,5 +1,5 @@
 import UbuntuKoreaLogo from "@assets/UbuntuKorea.svg"
-import JaipurPhoto from "@assets/jaipur.jpg"
+import GroupPhoto2023 from "@assets/group_photo.jpg"
 
 export const config = {
     siteTitle: "UbuCon Korea 2024",
@@ -12,22 +12,14 @@ export const config = {
         viewMoreUrl: "https://blog.ubucon.asia/tags/uca24"
     },
     cityBanner: {
-        title: "Let's meet in the pink city of innovation!",
-        description: 'Learn about the Jaipur, India the city where UbuCon Korea 2024 will be held. And plan your trip today!',
-        image: JaipurPhoto.src,
+        title: "cityBanner.title",
+        description: 'cityBanner.description',
+        image: GroupPhoto2023.src,
         buttons: [
             {
-                label: 'Venue & Safety',
+                label: 'nav.venue',
                 url: '/venue-and-travel/venue-and-safety'
-            },
-            {
-                label: 'Getting to the city',
-                url: '/venue-and-travel/getting-to-city'
-            },
-            {
-                label: 'Exploring the city',
-                url: '/venue-and-travel/explore-city'
-            },
+            }
         ]
     },
     footer: {

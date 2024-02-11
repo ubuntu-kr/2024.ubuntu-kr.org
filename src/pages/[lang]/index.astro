@@ -165,12 +165,12 @@ const t = useTranslations(lang);
     >
         <Row>
             <Col size={6} emptyLarge={7}>
-                <Card title={config.cityBanner.title} overlay>
-                    <p>{config.cityBanner.description}</p>
+                <Card title={t(config.cityBanner.title)} overlay>
+                    <p>{t(config.cityBanner.description)}</p>
                     {
                         config.cityBanner.buttons.map((item) => (
                             <Button element="a" href={item.url}>
-                                {item.label}
+                                {t(item.label)}
                             </Button>
                         ))
                     }
