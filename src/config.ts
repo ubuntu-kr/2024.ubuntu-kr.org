@@ -1,5 +1,6 @@
 import UbuntuKoreaLogo from "@assets/UbuntuKorea.svg"
 import GroupPhoto2023 from "@assets/group_photo.jpg"
+import { useTranslations } from "@i18n/utils";
 
 export const config = {
     siteTitle: "UbuCon Korea 2024",
@@ -30,79 +31,61 @@ export const config = {
             { name: "Ubuntu Korea Community", logoImage: UbuntuKoreaLogo.src, link: "https://ubuntu-kr.org" }
         ]
     },
-    navigation: [
-        {
-            label: 'About',
-            url: '/about'
-        },
-        {
-            label: 'Venue & Travel',
-            items: [
-                {
-                    label: 'Venue & Safety',
-                    url: '/venue-and-travel/venue-and-safety'
-                },
-                {
-                    label: 'Getting to the city',
-                    url: '/venue-and-travel/getting-to-city'
-                },
-                {
-                    label: 'Exploring the city',
-                    url: '/venue-and-travel/explore-city'
-                },
-                {
-                    label: 'Accommodations',
-                    url: '/venue-and-travel/accommodations'
-                },
-                {
-                    label: 'Travel grant',
-                    url: '/venue-and-travel/travel-grant'
-                }
-            ],
-        },
-        {
-            label: 'Programs',
-            items: [
-                {
-                    label: 'Important dates',
-                    url: '/programs/important-dates'
-                },
-                {
-                    label: 'Call for proposals (TBD)',
-                    url: '#'
-                },
-                {
-                    label: 'Schedules (TBD)',
-                    url: '#'
-                },
-                {
-                    label: 'Social events',
-                    url: '/programs/social-events'
-                }
-            ]
-        },
-        {
-            label: 'Sponsors/Patrons',
-            items: [
-                {
-                    label: 'Become a sponsor',
-                    url: '/sponsors/become-a-sponsor'
-                },
-                {
-                    label: 'Our sponsors',
-                    url: '/sponsors/our-sponsors'
-                }
-            ]
-        },
-        {
-            label: 'News',
-            url: 'https://blog.ubucon.asia/'
-        },
-        {
-            label: 'Docs',
-            url: 'https://docs.ubucon.asia'
-        }
-    ],
+    navigation: (locale: string)=>{
+        const t = useTranslations(locale);
+        return [
+            {
+                label: t('nav.about'),
+                url: '/about'
+            },
+            {
+                label: t('nav.venue'),
+                url: '/venue-and-travel/venue-and-safety'
+            },
+            {
+                label: 'Programs',
+                items: [
+                    {
+                        label: 'Important dates',
+                        url: '/programs/important-dates'
+                    },
+                    {
+                        label: 'Call for proposals (TBD)',
+                        url: '#'
+                    },
+                    {
+                        label: 'Schedules (TBD)',
+                        url: '#'
+                    },
+                    {
+                        label: 'Social events',
+                        url: '/programs/social-events'
+                    }
+                ]
+            },
+            {
+                label: 'Sponsors/Patrons',
+                items: [
+                    {
+                        label: 'Become a sponsor',
+                        url: '/sponsors/become-a-sponsor'
+                    },
+                    {
+                        label: 'Our sponsors',
+                        url: '/sponsors/our-sponsors'
+                    }
+                ]
+            },
+            {
+                label: 'News',
+                url: 'https://blog.ubucon.asia/'
+            },
+            {
+                label: 'Docs',
+                url: 'https://docs.ubucon.asia'
+            }
+        ]
+    },
     navigationRight: [
         {
             label: 'Register',

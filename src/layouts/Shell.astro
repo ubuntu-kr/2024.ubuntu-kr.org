@@ -21,7 +21,7 @@ const t = useTranslations(lang);
 	<div class="l-site">
 		<GlobalNavigation
 			logoTitle={config.siteTitle}
-			navItems={config.navigation}
+			navItems={config.navigation(lang)}
 			navItemsRight={config.navigationRight}
 			client:only="react"
 		/>

@@ -11,7 +11,6 @@ type GlobalNavigationProps = {
 	navItemsRight: NavItem[]
 }
 export default function GlobalNavigation(props: GlobalNavigationProps) {
-
 	return (
 		<Navigation
 			items={props.navItems}
