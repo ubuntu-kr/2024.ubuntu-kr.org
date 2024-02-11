@@ -75,14 +75,6 @@ export const config = {
                         url: `/${locale}/sponsors/our-sponsors`
                     }
                 ]
-            },
-            {
-                label: 'News',
-                url: 'https://blog.ubucon.asia/'
-            },
-            {
-                label: 'Docs',
-                url: 'https://docs.ubucon.asia'
             }
         ]
     },
