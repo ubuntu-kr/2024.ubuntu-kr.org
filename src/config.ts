@@ -12,6 +12,10 @@ export const config = {
         rssFeedUrl: "https://blog.ubucon.asia/tags/uca24/index.xml",
         viewMoreUrl: "https://blog.ubucon.asia/tags/uca24"
     },
+    featuredSpeakers: {
+        indicoExportUrl: "https://events.canonical.com/export/event/32.json?detail=contributions&occ=yes&pretty=yes",
+        contributionIds: [22, 5, 19, 16, 8, 4]
+    },
     cityBanner: {
         title: "cityBanner.title",
         description: 'cityBanner.description',

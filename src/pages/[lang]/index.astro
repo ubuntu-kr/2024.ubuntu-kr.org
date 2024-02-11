@@ -2,6 +2,7 @@
 import Shell from "@layouts/Shell.astro";
 import BlogFeed from "@components/BlogFeed.astro";
 import Sponsors from "@components/Sponsors.astro";
+import FeaturedSpeakers from "@components/FeaturedSpeakers.astro";
 import { config } from "../../config";
 import { Strip, Col, Row, Card, Button } from "@canonical/react-components";
 import uca24logo from "@assets/logo.svg";
@@ -49,112 +50,7 @@ const t = useTranslations(lang);
         </Row>
     </Strip>
     <BlogFeed />
-    <Strip bordered>
-        <h4>Featured speakers</h4>
-        <Row>
-            <Col size={4} medium={3}>
-                <div class="p-media-object--large">
-                    <img
-                        src={uca24logo.src}
-                        class="p-media-object__image"
-                        alt=""
-                    />
-                    <div class="p-media-object__details">
-                        <h2 class="p-media-object__title">John Doe</h2>
-                        <p class="p-media-object__content">
-                            Lorem ipsum dolor sit amet
-                        </p>
-                        <ul class="p-media-object__meta-list"></ul>
-                    </div>
-                </div>
-            </Col>
-            <Col size={4} medium={3}>
-                <div class="p-media-object--large">
-                    <img
-                        src={uca24logo.src}
-                        class="p-media-object__image"
-                        alt=""
-                    />
-                    <div class="p-media-object__details">
-                        <h2 class="p-media-object__title">John Doe</h2>
-                        <p class="p-media-object__content">
-                            Lorem ipsum dolor sit amet
-                        </p>
-                        <ul class="p-media-object__meta-list"></ul>
-                    </div>
-                </div>
-            </Col>
-            <Col size={4} medium={3}>
-                <div class="p-media-object--large">
-                    <img
-                        src={uca24logo.src}
-                        class="p-media-object__image"
-                        alt=""
-                    />
-                    <div class="p-media-object__details">
-                        <h2 class="p-media-object__title">John Doe</h2>
-                        <p class="p-media-object__content">
-                            Lorem ipsum dolor sit amet
-                        </p>
-                        <ul class="p-media-object__meta-list"></ul>
-                    </div>
-                </div>
-            </Col>
-            <Col size={4} medium={3}>
-                <div class="p-media-object--large">
-                    <img
-                        src={uca24logo.src}
-                        class="p-media-object__image"
-                        alt=""
-                    />
-                    <div class="p-media-object__details">
-                        <h2 class="p-media-object__title">John Doe</h2>
-                        <p class="p-media-object__content">
-                            Lorem ipsum dolor sit amet
-                        </p>
-                        <ul class="p-media-object__meta-list"></ul>
-                    </div>
-                </div>
-            </Col>
-            <Col size={4} medium={3}>
-                <div class="p-media-object--large">
-                    <img
-                        src={uca24logo.src}
-                        class="p-media-object__image"
-                        alt=""
-                    />
-                    <div class="p-media-object__details">
-                        <h2 class="p-media-object__title">John Doe</h2>
-                        <p class="p-media-object__content">
-                            Lorem ipsum dolor sit amet
-                        </p>
-                        <ul class="p-media-object__meta-list"></ul>
-                    </div>
-                </div>
-            </Col>
-            <Col size={4} medium={3}>
-                <div class="p-media-object--large">
-                    <img
-                        src={uca24logo.src}
-                        class="p-media-object__image"
-                        alt=""
-                    />
-                    <div class="p-media-object__details">
-                        <h2 class="p-media-object__title">John Doe</h2>
-                        <p class="p-media-object__content">
-                            Lorem ipsum dolor sit amet
-                        </p>
-                        <ul class="p-media-object__meta-list"></ul>
-                    </div>
-                </div>
-            </Col>
-        </Row>
-        <Row>
-            <Col size={12}>
-                <a href="" class="p-button">View more speakers</a>
-            </Col>
-        </Row>
-    </Strip>
+    <FeaturedSpeakers />
     <section
         class="p-strip--image is-light"
         style={{
