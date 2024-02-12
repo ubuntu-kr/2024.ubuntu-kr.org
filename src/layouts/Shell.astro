@@ -22,7 +22,7 @@ const t = useTranslations(lang);
 		<GlobalNavigation
 			logoTitle={config.siteTitle}
 			navItems={config.navigation(lang)}
-			navItemsRight={config.navigationRight}
+			navItemsRight={config.navigationRight(lang)}
 			client:only="react"
 		/>
 		<slot />

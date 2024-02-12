@@ -1,6 +1,8 @@
 import UbuntuKoreaLogo from "@assets/UbuntuKorea.svg"
 import GroupPhoto2023 from "@assets/group_photo.jpg"
 import { useTranslations } from "@i18n/utils";
+import { languages } from '@i18n/ui';
+
 
 export const config = {
     siteTitle: "UbuCon Korea 2024",
@@ -35,7 +37,7 @@ export const config = {
             { name: "Ubuntu Korea Community", logoImage: UbuntuKoreaLogo.src, link: "https://ubuntu-kr.org" }
         ]
     },
-    navigation: (locale: string)=>{
+    navigation: (locale: string) => {
         const t = useTranslations(locale);
         return [
             {
@@ -82,10 +84,18 @@ export const config = {
             }
         ]
     },
-    navigationRight: [
-        {
-            label: 'Register',
-            url: '#'
-        }
-    ]
+    navigationRight: (locale: string) => {
+        const t = useTranslations(locale);
+        const langPickerItems = Object.entries(languages).map(([lang, label]) => ({ label: label, url: `/${lang}/` }));
+        return [
+            {
+                label: '🎟️',
+                url: '#'
+            },
+            {
+                label: '🌐',
+                items: langPickerItems
+            }
+        ]
+    }
 }
