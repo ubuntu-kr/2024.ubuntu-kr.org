@@ -23,6 +23,7 @@ const t = useTranslations(lang);
 			logoTitle={config.siteTitle}
 			navItems={config.navigation(lang)}
 			navItemsRight={config.navigationRight(lang)}
+			logoImgSrc={config.siteHeaderTagLogoImg}
 			client:only="react"
 		/>
 		<slot />

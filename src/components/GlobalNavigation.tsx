@@ -9,6 +9,7 @@ type GlobalNavigationProps = {
 	logoTitle: string
 	navItems: NavItem[]
 	navItemsRight: NavItem[]
+	logoImgSrc: string
 }
 export default function GlobalNavigation(props: GlobalNavigationProps) {
 	return (
@@ -16,7 +17,7 @@ export default function GlobalNavigation(props: GlobalNavigationProps) {
 			items={props.navItems}
 			itemsRight={props.navItemsRight}
 			logo={{
-				src: 'https://assets.ubuntu.com/v1/82818827-CoF_white.svg',
+				src: props.logoImgSrc,
 				title: props.logoTitle,
 				url: '/'
 			}}

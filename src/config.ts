@@ -1,3 +1,4 @@
+import UbuntuKrCircleWhite from "@assets/UbuntuKrCircleWhite.svg"
 import UbuntuKoreaLogo from "@assets/UbuntuKorea.svg"
 import GroupPhoto2023 from "@assets/group_photo.jpg"
 import { useTranslations } from "@i18n/utils";
@@ -7,6 +8,7 @@ import { languages } from '@i18n/ui';
 export const config = {
     siteTitle: "UbuCon Korea 2024",
     siteDescription: "Microsoft Korea, Seoul, South Korea | August 10th",
+    siteHeaderTagLogoImg: UbuntuKrCircleWhite.src,
     socialMedia: {
         twitter: "UbuntuKrOrg"
     },
