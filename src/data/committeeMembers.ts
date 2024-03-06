@@ -55,6 +55,30 @@ export const committeeMembers = [
         profileImageUrl: "https://discourse.ubuntu-kr.org/user_avatar/discourse.ubuntu-kr.org/hothead-jung/144/12047_2.png"
     },
     {
+        name: "Nayeon Keum",
+        team: "Ubuntu Korea Community",
+        role: "General",
+        profileImageUrl: "/avatars/nayeon.jpg"
+    },
+    {
+        name: "Taeyong Lee",
+        team: "Ubuntu Korea Community",
+        role: "General, Venue and Safety",
+        profileImageUrl: "/avatars/taeyong.jpg"
+    },
+    {
+        name: "Yonghyun Yi",
+        team: "Ubuntu Korea Community",
+        role: "General, Venue and Safety",
+        profileImageUrl: "https://discourse.ubuntu-kr.org/letter_avatar_proxy/v4/letter/d/a88e4f/144.png"
+    },
+    {
+        name: "Soyeon Kwon",
+        team: "Ubuntu Korea Community",
+        role: "General, Venue and Safety",
+        profileImageUrl: "/avatars/soyeon.png"
+    },
+    {
         name: "Jungmin Yoon",
         team: "Ubuntu Korea Community",
         role: "Web and Video, Venue and Safety",
