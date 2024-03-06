@@ -26,4 +26,9 @@ const { title, description } = Astro.props;
 <style lang="scss" is:global>
 	@import "vanilla-framework";
 	@include vanilla;
+
+	.p-media-object--large .p-media-object__image {
+		object-fit: cover;
+		width: 100%;
+	}
 </style>
