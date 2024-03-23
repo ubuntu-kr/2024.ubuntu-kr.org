@@ -27,7 +27,7 @@ export const config = {
         buttons: [
             {
                 label: 'nav.venue',
-                url: '/venue-and-travel/venue-and-safety'
+                url: '/venue-and-safety'
             }
         ]
     },
