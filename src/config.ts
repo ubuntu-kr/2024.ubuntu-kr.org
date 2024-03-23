@@ -51,22 +51,22 @@ export const config = {
                 url: `/${locale}/venue-and-safety`
             },
             {
-                label: 'Programs',
+                label: t('nav.programs'),
                 items: [
-                    {
+                    /*{
                         label: 'Important dates',
                         url: '/programs/important-dates'
-                    },
+                    },*/
                     {
-                        label: 'Call for proposals (TBD)',
+                        label: t('nav.cfp'),
                         url: '#'
                     },
                     {
-                        label: 'Schedules (TBD)',
+                        label: t('nav.schedules'),
                         url: '#'
                     },
                     {
-                        label: 'Social events',
+                        label: t('nav.socialevents'),
                         url: '/programs/social-events'
                     }
                 ]
