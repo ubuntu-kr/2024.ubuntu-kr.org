@@ -1,6 +1,10 @@
 ---
 import { config } from "../config";
 import { Strip, Col, Row } from "@canonical/react-components";
+import { useTranslations, getLangFromUrl } from "@i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 type ForumItems = {
     title: string,
     last_posted_at: string,
@@ -27,7 +31,7 @@ const forumItems = forumDataJson["topic_list"]["topics"].map((item:ForumItems) =
 ---
 
 <Strip shallow bordered>
-    <h4>News from our forum</h4>
+    <h4>{t("feed.title")}</h4>
     <Row>
         {
             forumItems.map((item:MappedItems) => (
@@ -43,7 +47,7 @@ const forumItems = forumDataJson["topic_list"]["topics"].map((item:ForumItems) =
     <Row>
         <Col size={12}>
             <a href={`${config.forum.forumEndpoint}${config.forum.forumSlug}`} class="p-button"
-                >View more news on forum</a
+                >{t("feed.more")}</a
             >
         </Col>
     </Row>
