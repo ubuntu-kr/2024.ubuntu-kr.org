@@ -12,9 +12,9 @@ export const config = {
     socialMedia: {
         twitter: "UbuntuKrOrg"
     },
-    blog: {
-        rssFeedUrl: "https://blog.ubucon.asia/tags/uca24/index.xml",
-        viewMoreUrl: "https://blog.ubucon.asia/tags/uca24"
+    forum: {
+        forumEndpoint: "https://discourse.ubuntu-kr.org",
+        forumSlug: "/tags/c/notice/9/ubucon-kr-2023",
     },
     featuredSpeakers: {
         indicoExportUrl: "https://events.canonical.com/export/event/48.json?detail=contributions&occ=yes&pretty=yes",
