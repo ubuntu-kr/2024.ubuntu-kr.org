@@ -37,9 +37,9 @@ const t = useTranslations(lang);
             <Col size={3} />
             <Col size={9}>
                 <hr />
-                <a href={`/${lang}/about`} class="p-button--positive">About the event</a>
+                <a href={`/${lang}/about`} class="p-button--positive">{t("home.about")}</a>
                 <a href="mailto:contact@ubuntu-kr.org" class="p-button"
-                    >Interested to sponsor us?</a
+                    >{t("home.sponsor")}</a
                 >
             </Col>
         </Row>
