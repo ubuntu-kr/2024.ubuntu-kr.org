@@ -17,7 +17,7 @@ export const config = {
         viewMoreUrl: "https://blog.ubucon.asia/tags/uca24"
     },
     featuredSpeakers: {
-        indicoExportUrl: "https://events.canonical.com/export/event/32.json?detail=contributions&occ=yes&pretty=yes",
+        indicoExportUrl: "https://events.canonical.com/export/event/48.json?detail=contributions&occ=yes&pretty=yes",
         contributionIds: [22, 5, 19, 16, 8, 4]
     },
     cityBanner: {
@@ -90,10 +90,10 @@ export const config = {
         const t = useTranslations(locale);
         const langPickerItems = Object.entries(languages).map(([lang, label]) => ({ label: label, url: `/${lang}/` }));
         return [
-            {
+            /* {
                 label: '🎟️',
                 url: '#'
-            },
+            }, */
             {
                 label: '🌐',
                 items: langPickerItems
