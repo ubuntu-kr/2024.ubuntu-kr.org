@@ -53,10 +53,6 @@ export const config = {
             {
                 label: t('nav.programs'),
                 items: [
-                    /*{
-                        label: 'Important dates',
-                        url: '/programs/important-dates'
-                    },*/
                     {
                         label: t('nav.cfp'),
                         url: '#'
@@ -67,7 +63,7 @@ export const config = {
                     },
                     {
                         label: t('nav.socialevents'),
-                        url: '/programs/social-events'
+                        url: `/${locale}/programs/social-events`
                     }
                 ]
             },
