@@ -61,7 +61,7 @@ export const committeeMembers = [
         profileImageUrl: "/avatars/nayeon.jpg"
     },
     {
-        name: "Taeyong Lee",
+        name: "Tae Yong Lee",
         team: "Ubuntu Korea Community",
         role: "General, Venue and Safety",
         profileImageUrl: "/avatars/taeyong.jpg"
