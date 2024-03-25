@@ -14,7 +14,7 @@ export const config = {
     },
     forum: {
         forumEndpoint: "https://discourse.ubuntu-kr.org",
-        forumSlug: "/tags/c/notice/9/ubucon-kr-2023",
+        forumSlug: "/tags/c/notice/9/ubucon-kr-2024",
     },
     featuredSpeakers: {
         indicoExportUrl: "https://events.canonical.com/export/event/48.json?detail=contributions&occ=yes&pretty=yes",
