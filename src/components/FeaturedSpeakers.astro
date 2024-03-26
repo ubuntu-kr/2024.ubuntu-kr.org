@@ -15,6 +15,7 @@ const featuredSessions = sessions.filter((session: any) =>
 );
 ---
 
+{featuredSessions.length <= 0 ? "":
 <Strip bordered>
     <h4>{t("featured.title")}</h4>
     <Row>
@@ -49,3 +50,4 @@ const featuredSessions = sessions.filter((session: any) =>
         </Col>
     </Row>
 </Strip>
+}

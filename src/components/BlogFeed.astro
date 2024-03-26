@@ -1,30 +1,40 @@
 ---
 import { config } from "../config";
 import { Strip, Col, Row } from "@canonical/react-components";
-import jsdom from "jsdom";
-const { JSDOM } = jsdom;
-const window = new JSDOM().window;
-const blogFeedRaw = await fetch(config.blog.rssFeedUrl);
-const blogFeedXml = new window.DOMParser().parseFromString(
-    await blogFeedRaw.text(),
-    "text/xml",
-);
-const blogItemsXml = blogFeedXml.querySelectorAll("item");
-const blogItems = new Array();
-blogItemsXml.forEach((el: Element) => {
-    blogItems.push({
-        title: el.querySelector("title")?.innerHTML,
-        link: el.querySelector("link")?.innerHTML,
-        date: el.querySelector("pubDate")?.innerHTML,
-    });
-});
+import { useTranslations, getLangFromUrl } from "@i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+type ForumItems = {
+    title: string,
+    last_posted_at: string,
+    slug: string,
+    id: number
+}
+
+type MappedItems = {
+    title: string,
+    date: Date,
+    link: string
+}
+
+const forumDataRaw = await fetch(`${config.forum.forumEndpoint}${config.forum.forumSlug}.json?order=created`);
+const forumDataJson = await forumDataRaw.json();
+
+const forumItems = forumDataJson["topic_list"]["topics"].map((item:ForumItems) => {
+    return {
+        title: item["title"],
+        date: new Date(item["last_posted_at"]).toLocaleString(),
+        link: `${config.forum.forumEndpoint}/t/${item.slug}/${item.id}`
+    }
+}).slice(0, 3);
 ---
 
 <Strip shallow bordered>
-    <h4>News from our blog</h4>
+    <h4>{t("feed.title")}</h4>
     <Row>
         {
-            blogItems.map((item) => (
+            forumItems.map((item:MappedItems) => (
                 <Col size={4}>
                     <a href={item.link}>
                         <h3>{item.title}</h3>
@@ -36,8 +46,8 @@ blogItemsXml.forEach((el: Element) => {
     </Row>
     <Row>
         <Col size={12}>
-            <a href={config.blog.viewMoreUrl} class="p-button"
-                >View more news on blog</a
+            <a href={`${config.forum.forumEndpoint}${config.forum.forumSlug}`} class="p-button"
+                >{t("feed.more")}</a
             >
         </Col>
     </Row>

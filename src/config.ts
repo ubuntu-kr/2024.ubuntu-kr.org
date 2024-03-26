@@ -12,12 +12,12 @@ export const config = {
     socialMedia: {
         twitter: "UbuntuKrOrg"
     },
-    blog: {
-        rssFeedUrl: "https://blog.ubucon.asia/tags/uca24/index.xml",
-        viewMoreUrl: "https://blog.ubucon.asia/tags/uca24"
+    forum: {
+        forumEndpoint: "https://discourse.ubuntu-kr.org",
+        forumSlug: "/tags/c/notice/9/ubucon-kr-2024",
     },
     featuredSpeakers: {
-        indicoExportUrl: "https://events.canonical.com/export/event/32.json?detail=contributions&occ=yes&pretty=yes",
+        indicoExportUrl: "https://events.canonical.com/export/event/48.json?detail=contributions&occ=yes&pretty=yes",
         contributionIds: [22, 5, 19, 16, 8, 4]
     },
     cityBanner: {
@@ -27,7 +27,7 @@ export const config = {
         buttons: [
             {
                 label: 'nav.venue',
-                url: '/venue-and-travel/venue-and-safety'
+                url: '/venue-and-safety'
             }
         ]
     },
@@ -51,23 +51,19 @@ export const config = {
                 url: `/${locale}/venue-and-safety`
             },
             {
-                label: 'Programs',
+                label: t('nav.programs'),
                 items: [
                     {
-                        label: 'Important dates',
-                        url: '/programs/important-dates'
-                    },
-                    {
-                        label: 'Call for proposals (TBD)',
+                        label: t('nav.cfp'),
                         url: '#'
                     },
                     {
-                        label: 'Schedules (TBD)',
+                        label: t('nav.schedules'),
                         url: '#'
                     },
                     {
-                        label: 'Social events',
-                        url: '/programs/social-events'
+                        label: t('nav.socialevents'),
+                        url: `/${locale}/programs/social-events`
                     }
                 ]
             },
@@ -90,10 +86,10 @@ export const config = {
         const t = useTranslations(locale);
         const langPickerItems = Object.entries(languages).map(([lang, label]) => ({ label: label, url: `/${lang}/` }));
         return [
-            {
+            /* {
                 label: '🎟️',
                 url: '#'
-            },
+            }, */
             {
                 label: '🌐',
                 items: langPickerItems

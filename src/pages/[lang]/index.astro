@@ -37,9 +37,9 @@ const t = useTranslations(lang);
             <Col size={3} />
             <Col size={9}>
                 <hr />
-                <a href="#" class="p-button--positive">About the event</a>
-                <a href="mailto:sponsorship@ubucon.asia" class="p-button"
-                    >Interested to sponsor us?</a
+                <a href={`/${lang}/about`} class="p-button--positive">{t("home.about")}</a>
+                <a href="mailto:sponsorship@ubuntu-kr.org" class="p-button"
+                    >{t("home.sponsor")}</a
                 >
             </Col>
         </Row>
@@ -65,7 +65,7 @@ const t = useTranslations(lang);
                     <p>{t(config.cityBanner.description)}</p>
                     {
                         config.cityBanner.buttons.map((item) => (
-                            <Button element="a" href={item.url}>
+                            <Button element="a" href={`/${lang}${item.url}`}>
                                 {t(item.label)}
                             </Button>
                         ))
