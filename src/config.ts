@@ -82,9 +82,11 @@ export const config = {
             }
         ]
     },
-    navigationRight: (locale: string) => {
+    navigationRight: (locale: string, page: { path: string, i18n: boolean}) => {
         const t = useTranslations(locale);
-        const langPickerItems = Object.entries(languages).map(([lang, label]) => ({ label: label, url: `/${lang}/` }));
+        const langPickerItems = Object.entries(languages).map(([lang, label]) => ({ 
+            label: label, url: page.i18n ? `/${lang}${page.path}` : `${page.path}` 
+        }));
         return [
             /* {
                 label: '🎟️',
