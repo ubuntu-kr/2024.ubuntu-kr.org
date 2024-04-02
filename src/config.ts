@@ -55,7 +55,7 @@ export const config = {
                 items: [
                     {
                         label: t('nav.cfp'),
-                        url: '#'
+                        url: '/cfp'
                     },
                     {
                         label: t('nav.schedules'),
