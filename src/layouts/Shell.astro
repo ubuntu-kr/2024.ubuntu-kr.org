@@ -55,17 +55,22 @@ const t = useTranslations(lang);
 					</p>
 					<ul class="p-inline-list--middot">
 						<li class="p-inline-list__item">
+							<a href={config.footer.privacyPolicy} target="_blank"
+								><small>{t("footer.policy")}</small></a
+							>
+						</li>
+						<li class="p-inline-list__item">
 							<a href={config.footer.contactUs}
 								><small>{t("footer.contact")}</small></a
 							>
 						</li>
 						<li class="p-inline-list__item">
-							<a href={config.footer.srcRepoUrl}
+							<a href={config.footer.srcRepoUrl} target="_blank"
 								><small>{t("footer.srcrepo")}</small></a
 							>
 						</li>
 						<li class="p-inline-list__item">
-							<a href="https://event.ubuntu-kr.org"
+							<a href="https://event.ubuntu-kr.org" target="_blank"
 								><small>{t("footer.otherevents")}</small></a
 							>
 						</li>
