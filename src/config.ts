@@ -33,6 +33,7 @@ export const config = {
     },
     footer: {
         copyright: "© 2024-Present Ubuntu Korea Community. Ubuntu and Canonical are registered trademarks of Canonical Ltd. Unless otherwise noted, content licensed under CC BY 4.0 source code under MIT.",
+        privacyPolicy: "https://disclosures.ubuntu-kr.org/privacy-policy/uck24/",
         contactUs: "mailto:contact@ubuntu-kr.org",
         srcRepoUrl: "https://github.com/ubuntu-kr/2024.ubuntu-kr.org",
         organizers: [
@@ -55,7 +56,7 @@ export const config = {
                 items: [
                     {
                         label: t('nav.cfp'),
-                        url: '#'
+                        url: '/cfp'
                     },
                     {
                         label: t('nav.schedules'),
@@ -82,9 +83,11 @@ export const config = {
             }
         ]
     },
-    navigationRight: (locale: string) => {
+    navigationRight: (locale: string, page: { path: string, i18n: boolean}) => {
         const t = useTranslations(locale);
-        const langPickerItems = Object.entries(languages).map(([lang, label]) => ({ label: label, url: `/${lang}/` }));
+        const langPickerItems = Object.entries(languages).map(([lang, label]) => ({ 
+            label: label, url: page.i18n ? `/${lang}${page.path}` : `${page.path}` 
+        }));
         return [
             /* {
                 label: '🎟️',

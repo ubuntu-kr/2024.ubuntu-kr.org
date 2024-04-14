@@ -2,7 +2,7 @@
 import "vanilla-framework/_index.scss";
 import GlobalNavigation from "@components/GlobalNavigation.tsx";
 import Layout from "@layouts/Layout.astro";
-import { useTranslations, getLangFromUrl } from "@i18n/utils";
+import { useTranslations, getLangFromUrl, getUrlWithoutLang } from "@i18n/utils";
 interface Props {
 	title?: string;
 	description?: string;
@@ -11,6 +11,7 @@ interface Props {
 const { title, description } = Astro.props;
 import { config } from "../config";
 const lang = getLangFromUrl(Astro.url);
+const page = getUrlWithoutLang(Astro.url);
 const t = useTranslations(lang);
 ---
 
@@ -22,7 +23,7 @@ const t = useTranslations(lang);
 		<GlobalNavigation
 			logoTitle={config.siteTitle}
 			navItems={config.navigation(lang)}
-			navItemsRight={config.navigationRight(lang)}
+			navItemsRight={config.navigationRight(lang, page)}
 			logoImgSrc={config.siteHeaderTagLogoImg}
 			client:only="react"
 		/>
@@ -54,17 +55,22 @@ const t = useTranslations(lang);
 					</p>
 					<ul class="p-inline-list--middot">
 						<li class="p-inline-list__item">
+							<a href={config.footer.privacyPolicy} target="_blank"
+								><small>{t("footer.policy")}</small></a
+							>
+						</li>
+						<li class="p-inline-list__item">
 							<a href={config.footer.contactUs}
 								><small>{t("footer.contact")}</small></a
 							>
 						</li>
 						<li class="p-inline-list__item">
-							<a href={config.footer.srcRepoUrl}
+							<a href={config.footer.srcRepoUrl} target="_blank"
 								><small>{t("footer.srcrepo")}</small></a
 							>
 						</li>
 						<li class="p-inline-list__item">
-							<a href="https://event.ubuntu-kr.org"
+							<a href="https://event.ubuntu-kr.org" target="_blank"
 								><small>{t("footer.otherevents")}</small></a
 							>
 						</li>
