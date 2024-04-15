@@ -60,7 +60,7 @@ export const config = {
                     },
                     {
                         label: t('nav.schedules'),
-                        url: '#'
+                        url: '/schedules'
                     },
                     {
                         label: t('nav.socialevents'),
@@ -89,10 +89,10 @@ export const config = {
             label: label, url: page.i18n ? `/${lang}${page.path}` : `${page.path}` 
         }));
         return [
-            /* {
+            {
                 label: '🎟️',
-                url: '#'
-            }, */
+                url: '/tickets'
+            },
             {
                 label: '🌐',
                 items: langPickerItems
