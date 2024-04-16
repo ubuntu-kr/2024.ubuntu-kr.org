@@ -27,6 +27,23 @@ const { title, description } = Astro.props;
 	@import "vanilla-framework";
 	@include vanilla;
 
+	.responsive-table {
+		display: block;
+		overflow-x: auto;
+	}
+	
+	table {
+		width: max-content;
+		table-layout: auto;
+		overflow-x: scroll;
+	}
+
+	@media screen and (min-width: $breakpoint-large) {
+		table {
+			width: 100%;
+		}
+	}
+
 	.p-media-object--large .p-media-object__image {
 		object-fit: cover;
 		width: 100%;
