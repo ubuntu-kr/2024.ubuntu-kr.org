@@ -24,7 +24,7 @@ const forumDataJson = await forumDataRaw.json();
 const forumItems = forumDataJson["topic_list"]["topics"].map((item:ForumItems) => {
     return {
         title: item["title"],
-        date: new Date(item["last_posted_at"]).toLocaleString(),
+        date: new Date(item["last_posted_at"]).toLocaleString('ko-KR'),
         link: `${config.forum.forumEndpoint}/t/${item.slug}/${item.id}`
     }
 }).slice(0, 3);
