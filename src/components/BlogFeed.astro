@@ -24,14 +24,14 @@ const forumDataJson = await forumDataRaw.json();
 const forumItems = forumDataJson["topic_list"]["topics"].map((item:ForumItems) => {
     return {
         title: item["title"],
-        date: new Date(item["last_posted_at"]).toLocaleString(),
+        date: new Date(item["last_posted_at"]).toLocaleString('ko-KR'),
         link: `${config.forum.forumEndpoint}/t/${item.slug}/${item.id}`
     }
 }).slice(0, 3);
 ---
 
 <Strip shallow bordered>
-    <h4>{t("feed.title")}</h4>
+    <h2 class="p-heading--4">{t("feed.title")}</h4>
     <Row>
         {
             forumItems.map((item:MappedItems) => (

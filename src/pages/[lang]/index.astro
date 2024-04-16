@@ -3,10 +3,14 @@ import Shell from "@layouts/Shell.astro";
 import BlogFeed from "@components/BlogFeed.astro";
 import Sponsors from "@components/Sponsors.astro";
 import FeaturedSpeakers from "@components/FeaturedSpeakers.astro";
+
 import { config } from "../../config";
-import { Strip, Col, Row, Card, Button } from "@canonical/react-components";
-import uca24logo from "@assets/logo.svg";
+import uck24logo from "@assets/logo.svg";
+
+import { Strip, Col, Row, Button } from "@canonical/react-components";
 import { getLangFromUrl, useTranslations } from '@i18n/utils';
+import { Image } from "astro:assets";
+
 export function getStaticPaths() {
 	return [{ params: { lang: "en" } }, { params: { lang: "ko" } }];
 }
@@ -19,24 +23,30 @@ const t = useTranslations(lang);
         <Row>
             <Col size={3} />
             <Col size={9}>
-                <p class="p-heading--2">{config.siteTitle}</p>
+                <h1 class="p-heading--2">{config.siteTitle}</h1>
             </Col>
         </Row>
         <Row>
             <Col size={3}>
-                <img src={uca24logo.src} alt="" width="200" />
+                <Image src={uck24logo} alt="" width="200"/>
             </Col>
             <Col size={9}>
-                <p>
-                    {t("home.tagline")}
+                <p class="p-heading--4">
+                    {t("event.edition")}
+                </p>
+                <p class="p-heading--3">
+                    {t("event.theme")}
+                </p>
+                <p class="p-heading--3">
+                    {t("event.venuedate")}
                 </p>
             </Col>
         </Row>
         <Row>
             <Col size={3} />
             <Col size={9}>
-                <hr />
-                <a href={`/${lang}/about`} class="p-button--positive">{t("home.about")}</a>
+                <a href={`/cfp`} class="p-button--positive">{t("home.cfp")}</a>
+                <a href={`/tickets`} class="p-button">{t("home.tickets")}</a>
                 <a href={`/${lang}/sponsors/become-a-sponsor/`} class="p-button"
                     >{t("home.sponsor")}</a
                 >
@@ -60,7 +70,8 @@ const t = useTranslations(lang);
     >
         <Row>
             <Col size={6} emptyLarge={7}>
-                <Card title={t(config.cityBanner.title)} overlay>
+                <div class="p-card--overlay">
+                    <h2 class="p-heading--3">{t(config.cityBanner.title)}</h2>
                     <p>{t(config.cityBanner.description)}</p>
                     {
                         config.cityBanner.buttons.map((item) => (
@@ -69,7 +80,7 @@ const t = useTranslations(lang);
                             </Button>
                         ))
                     }
-                </Card>
+                </div>
             </Col>
         </Row>
     </section>

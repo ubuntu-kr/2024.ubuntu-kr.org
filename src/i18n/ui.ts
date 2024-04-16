@@ -7,10 +7,14 @@ export const languages = {
   
   export const ui: Record<string, Record<string, string>> = {
     en:{
-      
+      'event.edition': 'UbuCon Korea 2nd Edition',
+      'event.theme': 'Deploy with Ubuntu',
+      'event.venuedate': 'August 10th, Microsoft Korea',
       'home.tagline': 'The second edition of UbuCon Korea to be held at Microsoft Korea which is the same venue as last year on August 10th. Various sessions will be prepared with theme "Deploy with Ubuntu"!',
       'home.venuetbd': '*Dates and venue to be confirmed soon.',
       'home.about': 'About the event',
+      'home.cfp': 'Submit proposals',
+      'home.tickets': 'Buy Tickets',
       'home.sponsor': 'Interested to sponsor us?',
       'feed.title': 'News from our forum',
       'feed.more': 'View more news on forum',
@@ -35,9 +39,14 @@ export const languages = {
       'sponsor.website': 'Visit website'
     },
     ko: {
-      'home.tagline': '두번째 UbuCon Korea는 작년과 동일한 장소인 한국마이크로소프트에서 8월 10일에 개최될 예정입니다. "Deploy with Ubuntu"를 테마로 다양한 세션이 준비 될 예정입니다.',
+      'event.edition': '두번째 UbuCon Korea',
+      'event.theme': '우분투와 함께 배포하기',
+      'event.venuedate': '8월 10일, 한국마이크로소프트',
+      'home.tagline': '두번째 UbuCon Korea는 작년과 동일한 장소인 한국마이크로소프트에서 8월 10일에 개최될 예정입니다. "Deploy with Ubuntu"를 테마로 다양한 세션을 준비하고 있습니다.',
       'home.venuetbd': '*장소 및 날짜 추후 확정 예정.',
       'home.about': '행사 소개',
+      'home.cfp': '발표 제안',
+      'home.tickets': '티켓 구매',
       'home.sponsor': '후원 문의',
       'feed.title': '포럼 소식',
       'feed.more': '포럼에서 더 보기',
