@@ -9,7 +9,7 @@ export const languages = {
     en:{
       'event.edition': 'UbuCon Korea 2nd Edition',
       'event.theme': 'Deploy with Ubuntu',
-      'event.date': 'April 10th, 2024',
+      'event.date': 'August 10th, 2024',
       'event.venue': 'Microsoft Korea (13F)',
       'home.tagline': 'The second edition of UbuCon Korea to be held at Microsoft Korea which is the same venue as last year on August 10th. Various sessions will be prepared with theme "Deploy with Ubuntu"!',
       'home.venuetbd': '*Dates and venue to be confirmed soon.',
