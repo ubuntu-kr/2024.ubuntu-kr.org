@@ -17,7 +17,7 @@ export default function SponsorLogoAndModal(props: SponsorLogoAndModalProps) {
         <>
             <img src={props.logoImageSrc} alt={props.name} onClick={() => setModalOpen(true)} />
             {modalOpen ? <Modal close={closeHandler} title={t('sponsor.about')} buttonRow={<>
-                <Button appearance="positive" element="a" href={props.url}>
+                <Button appearance="positive" element="a" href={props.url} target="_blank">
                     {t('sponsor.website')}
                 </Button>
             </>}>
