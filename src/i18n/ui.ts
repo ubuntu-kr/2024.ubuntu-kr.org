@@ -9,7 +9,8 @@ export const languages = {
     en:{
       'event.edition': 'UbuCon Korea 2nd Edition',
       'event.theme': 'Deploy with Ubuntu',
-      'event.venuedate': 'August 10th, Microsoft Korea',
+      'event.date': 'April 10th, 2024',
+      'event.venue': 'Microsoft Korea (13F)',
       'home.tagline': 'The second edition of UbuCon Korea to be held at Microsoft Korea which is the same venue as last year on August 10th. Various sessions will be prepared with theme "Deploy with Ubuntu"!',
       'home.venuetbd': '*Dates and venue to be confirmed soon.',
       'home.about': 'About the event',
@@ -41,7 +42,8 @@ export const languages = {
     ko: {
       'event.edition': '두번째 UbuCon Korea',
       'event.theme': '우분투와 함께 배포하기',
-      'event.venuedate': '8월 10일, 한국마이크로소프트',
+      'event.date': '2024년 8월 10일',
+      'event.venue': '한국마이크로소프트 (13층)',
       'home.tagline': '두번째 UbuCon Korea는 작년과 동일한 장소인 한국마이크로소프트에서 8월 10일에 개최될 예정입니다. "Deploy with Ubuntu"를 테마로 다양한 세션을 준비하고 있습니다.',
       'home.venuetbd': '*장소 및 날짜 추후 확정 예정.',
       'home.about': '행사 소개',

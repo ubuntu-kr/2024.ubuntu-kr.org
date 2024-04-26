@@ -23,7 +23,7 @@ const t = useTranslations(lang);
         <Row>
             <Col size={3} />
             <Col size={9}>
-                <h1 class="p-heading--2">{config.siteTitle}</h1>
+                <h1 class="p-heading--1">{config.siteTitle}</h1>
             </Col>
         </Row>
         <Row>
@@ -31,15 +31,9 @@ const t = useTranslations(lang);
                 <Image src={uck24logo} alt="" width="200"/>
             </Col>
             <Col size={9}>
-                <p class="p-heading--4">
-                    {t("event.edition")}
-                </p>
-                <p class="p-heading--3">
-                    {t("event.theme")}
-                </p>
-                <p class="p-heading--3">
-                    {t("event.venuedate")}
-                </p>
+                <p class="p-heading--2">{t("event.theme")}</p>
+                <p class="p-heading--2">{t("event.date")}</p>
+                <p class="p-heading--2">{t("event.venue")}</p>
             </Col>
         </Row>
         <Row>
