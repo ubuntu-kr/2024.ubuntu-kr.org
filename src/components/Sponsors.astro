@@ -6,7 +6,6 @@ import { useTranslations, getLangFromUrl } from "@i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
-<!--
 <Strip type="light">
     <h2>{t("nav.sponsors.list")}</h2>
     {
@@ -46,4 +45,3 @@ const t = useTranslations(lang);
         ))
     }
 </Strip>
--->
