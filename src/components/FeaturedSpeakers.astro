@@ -11,7 +11,7 @@ const sessions = indicoResJson.results
     ? indicoResJson.results[0].contributions
     : null;
 const featuredSessions = sessions.filter((session: any) =>
-    config.featuredSpeakers.contributionIds.includes(session.friendly_id),
+    Object.keys(config.featuredSpeakers.contributions).includes(session.friendly_id.toString())
 );
 ---
 
@@ -20,13 +20,18 @@ const featuredSessions = sessions.filter((session: any) =>
     <h4>{t("featured.title")}</h4>
     <Row>
         {
-            featuredSessions.map((session: any) => (
+            featuredSessions.map((session: {
+                url: string,
+                speakers: [{ fullName: string }],
+                title: string,
+                friendly_id: number
+            }) => (
                 <Col size={4} medium={3}>
                     <div class="p-media-object--large">
                         <img
-                            src={eventLogo.src}
-                            class="p-media-object__image"
-                            alt=""
+                            src={`https://events.canonical.com/user/${config.featuredSpeakers.contributions[session.friendly_id].profileImg}/picture-default`}
+                            class="p-media-object__image is-round"
+                            alt={session.speakers[0].fullName}
                         />
                         <div class="p-media-object__details">
                             <a href={session.url}>
