@@ -17,7 +17,7 @@ const featuredSessions = sessions.filter((session: any) =>
 
 {featuredSessions.length <= 0 ? "":
 <Strip bordered>
-    <h4>{t("featured.title")}</h4>
+    <h2 class="p-headding--4">{t("featured.title")}</h2>
     <Row>
         {
             featuredSessions.map((session: {
@@ -31,13 +31,13 @@ const featuredSessions = sessions.filter((session: any) =>
                         <img
                             src={`https://events.canonical.com/user/${config.featuredSpeakers.contributions[session.friendly_id].profileImg}/picture-default`}
                             class="p-media-object__image is-round"
-                            alt={session.speakers[0].fullName}
+                            alt=""
                         />
                         <div class="p-media-object__details">
                             <a href={session.url}>
-                                <h4 class="p-media-object__title">
+                                <h3 class="p-media-object__title">
                                     {session.speakers[0].fullName}
-                                </h4>
+                                </h3>
                             </a>
                             <p class="p-media-object__content">
                                 {session.title}
