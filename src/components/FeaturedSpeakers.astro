@@ -52,6 +52,7 @@ featuredSpeakers.push({
                                 `https://events.canonical.com/user/${speaker.profileImg}/picture-default`
                                 : eventLogo.src
                             }
+                            onerror={`this.onerror=null;this.src=${eventLogo.src}`}
                             class="p-media-object__image is-round"
                             alt=""
                             loading="lazy"
