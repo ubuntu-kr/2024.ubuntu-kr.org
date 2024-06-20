@@ -5,37 +5,66 @@ import eventLogo from "@assets/logo.svg";
 import { useTranslations, getLangFromUrl } from "@i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
 const indicoResponse = await fetch(config.featuredSpeakers.indicoExportUrl);
 const indicoResJson = await indicoResponse.json();
 const sessions = indicoResJson.results
     ? indicoResJson.results[0].contributions
     : null;
 const featuredSessions = sessions.filter((session: any) =>
-    config.featuredSpeakers.contributionIds.includes(session.friendly_id),
+    config.featuredSpeakers.contributionIds.includes(session.friendly_id)
 );
+
+const featuredSpeakers = [];
+for (const session of featuredSessions) {
+    for (const speaker of session.speakers) {
+        const imgId = config.featuredSpeakers.speakerIds.find(
+            (user) => speaker.db_id === user.db_id
+        );
+        featuredSpeakers.push({
+            name: speaker.fullName.split(",").join(" "),
+            profileImg: imgId?.user,
+            title: session.title,
+            url: session.url
+        })
+    }
+}
+
+// Keynote 관련 하드코딩
+featuredSpeakers.push({
+    name: "Utkarsh Gupta",
+    title: "Keynote",
+    url: ""
+})
+
 ---
 
-{featuredSessions.length <= 0 ? "":
+{featuredSpeakers.length <= 0 ? "":
 <Strip bordered>
-    <h4>{t("featured.title")}</h4>
+    <h2 class="p-heading--4">{t("featured.title")}</h2>
     <Row>
         {
-            featuredSessions.map((session: any) => (
+            featuredSpeakers.map((speaker) => (
                 <Col size={4} medium={3}>
                     <div class="p-media-object--large">
                         <img
-                            src={eventLogo.src}
-                            class="p-media-object__image"
+                            src={speaker.profileImg ? 
+                                `https://events.canonical.com/user/${speaker.profileImg}/picture-default`
+                                : eventLogo.src
+                            }
+                            onerror={`this.onerror=null;this.src=${eventLogo.src}`}
+                            class="p-media-object__image is-round"
                             alt=""
+                            loading="lazy"
                         />
                         <div class="p-media-object__details">
-                            <a href={session.url}>
-                                <h4 class="p-media-object__title">
-                                    {session.speakers[0].fullName}
-                                </h4>
+                            <a href={speaker.url}>
+                                <h3>
+                                    {speaker.name}
+                                </h3>
                             </a>
                             <p class="p-media-object__content">
-                                {session.title}
+                                {speaker.title}
                             </p>
                             <ul class="p-media-object__meta-list" />
                         </div>
@@ -46,7 +75,9 @@ const featuredSessions = sessions.filter((session: any) =>
     </Row>
     <Row>
         <Col size={12}>
-            <a href="" class="p-button">{t("featured.more")}</a>
+            <a href="https://events.canonical.com/event/48/contributions/" target="_blank" class="p-button">
+                {t("featured.more")}
+            </a>
         </Col>
     </Row>
 </Strip>

@@ -18,7 +18,8 @@ export const config = {
     },
     featuredSpeakers: {
         indicoExportUrl: "https://events.canonical.com/export/event/48.json?detail=contributions&occ=yes&pretty=yes",
-        contributionIds: [22, 5, 19, 16, 8, 4]
+        contributionIds: [7, 21, 10],
+        speakerIds: [{ db_id: 562, user: 1624 }, { db_id: 525, user: 2692 }, { db_id: 524, user: 2699 }, { db_id: 526, user: 2658 }]
     },
     cityBanner: {
         title: "cityBanner.title",
