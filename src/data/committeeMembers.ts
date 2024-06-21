@@ -83,5 +83,11 @@ export const committeeMembers = [
         team: "Ubuntu Korea Community",
         role: "Web and Video, Social Media and Design, Venue and Safety",
         profileImageUrl: "https://avatars.githubusercontent.com/u/7126454?v=4"
+    },
+    {
+        name: "Sangbin Lim",
+        team: "GroMetric",
+        role: "Social Media and Design, Venue and Safety",
+        profileImageUrl: "https://avatars.githubusercontent.com/u/125565943?v=4"
     }
 ]
