@@ -87,7 +87,7 @@ export const committeeMembers = [
     {
         name: "Sangbin Lim",
         team: "GroMetric",
-        role: "Social Media and Design, Venue and Safety",
+        role: "Sponsorship and Finances, Social Media and Design",
         profileImageUrl: "https://avatars.githubusercontent.com/u/125565943?v=4"
     }
 ]
