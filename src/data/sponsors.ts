@@ -1,6 +1,7 @@
 import type { ColSize } from "@canonical/react-components"
 import logoPlaceHolder from "@assets/logo_placeholder.svg";
 import groMetric from "@assets/sponsors/grometric.svg";
+import ahnlabCloudmate from "@assets/sponsors/ahnlab_cloudmate.png";
 
 export const sponsors = [
     {
@@ -8,6 +9,12 @@ export const sponsors = [
         sizeOnLargeScreen: 6 as ColSize,
         sizeOnMediumScreen: 6 as ColSize,
         sizeOnSmallScreen: 6 as ColSize,
+    },
+    {
+        sponsorLevelName: "Venue",
+        sizeOnLargeScreen: 4 as ColSize,
+        sizeOnMediumScreen: 4 as ColSize,
+        sizeOnSmallScreen: 3 as ColSize,
     },
     {
         sponsorLevelName: "Gold",
@@ -20,6 +27,14 @@ export const sponsors = [
         sizeOnLargeScreen: 3 as ColSize,
         sizeOnMediumScreen: 3 as ColSize,
         sizeOnSmallScreen: 2 as ColSize,
+        list: [
+            {
+                name: "안랩클라우드메이트",
+                logoUrl: ahnlabCloudmate.src,
+                url: "https://www.cloudmt.co.kr",
+                description: "Ahnlab CloudMate is the certified CSP company that located in Seoul, Korea. Ahnlab CloudMate provides professional managed service on cloud environment. Based on experiences from MNCs, Ahnlab CloudMate has its best certified engineers and developers in the cloud sector. Through the professional managed service, Ahnlab CloudMate supports systematic management and its cloud infrastructure to the customers. Furthermore, Ahnlab CloudMate also offers consulting for cloud service to industries that are adapting cloud infrastructure for the first time. Lastly, With Microsoft Azure MVP, Ahnlab CloudMate has been contributed educational programs and activities to various vendors and many communities for years."
+            }
+        ]
     },
     {
         sponsorLevelName: "Bronze",
