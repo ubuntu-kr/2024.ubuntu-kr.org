@@ -2,6 +2,7 @@ import type { ColSize } from "@canonical/react-components"
 import logoPlaceHolder from "@assets/logo_placeholder.svg";
 import ubuntu from "@assets/sponsors/ubuntu.svg";
 import microsoft from "@assets/sponsors/microsoft.png";
+import nhncloud from "@assets/sponsors/nhncloud.png";
 import ahnlabCloudmate from "@assets/sponsors/ahnlab_cloudmate.png";
 import groMetric from "@assets/sponsors/grometric.svg";
 import whaTapLabs from "@assets/sponsors/whatap.png";
@@ -40,6 +41,14 @@ export const sponsors = [
         sizeOnLargeScreen: 4 as ColSize,
         sizeOnMediumScreen: 4 as ColSize,
         sizeOnSmallScreen: 3 as ColSize,
+        list: [
+            {
+                name: "NHN Cloud",
+                logoUrl: nhncloud.src,
+                url: "https://www.nhncloud.com/kr?utm_source=ubucon&utm_medium=sponsor&utm_campaign=ubucon2024",
+                description: "NHN Cloud는 대규모의 서비스 노하우와 오픈 소스 기술이 융화된 국내 최고의 퍼블릭 클라우드입니다. 데이터 센터 설비부터 소프트웨어를 커버하는 Full-Stack 자체 운영 기술력으로 클라우드 생태계 내의 모든 기술 역량을 보유하고 있으며, Open Stack 기반 클라우드로 멀티/하이브리드 환경에 대응할 수 있는 유연성을 갖췄습니다. Game, Fintech, AI, Notification 등 산업 분야별 최적화된 클라우드 서비스를 지금 확인해 보세요!"
+            }
+        ]
     },
     {
         sponsorLevelName: "Silver",
