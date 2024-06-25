@@ -4,6 +4,7 @@ import ubuntu from "@assets/sponsors/ubuntu.svg";
 import microsoft from "@assets/sponsors/microsoft.png";
 import ahnlabCloudmate from "@assets/sponsors/ahnlab_cloudmate.png";
 import groMetric from "@assets/sponsors/grometric.svg";
+import whaTapLabs from "@assets/sponsors/whatap.png";
 
 export const sponsors = [
     {
@@ -66,6 +67,12 @@ export const sponsors = [
                 url: "http://www.grometric.kr/",
                 description: "그로메트릭은 고객의 지속가능한 성장을 위한 인텔리전스와 안전함을 제공합니다. 중장기적인 관점에서 데이터 메트릭을 통한 고객의 성장을 돕는 솔루션 개발을 목표하고 있어요. 아울러 다양한 OpenSource Software, Cloud, Security 솔루션으로 여러분의 성장과 함께 하고 싶어요."
             },
+            {
+                name: "WhaTap Labs",
+                logoUrl: whaTapLabs.src,
+                url: "https://www.whatap.io/",
+                description: "WhaTap Labs 에서는 IT 모니터링 서비스인 “WhaTap” 을 제공하고 있습니다. 개발자와 운영자가 IT 서비스를 더 쉽고 안정적으로 운영할 수 있도록 하고 있습니다."
+            }
         ]
     },
     {
