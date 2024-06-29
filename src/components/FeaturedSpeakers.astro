@@ -46,7 +46,7 @@ featuredSpeakers.push({
         {
             featuredSpeakers.map((speaker) => (
                 <Col size={4} medium={3}>
-                    <div class="p-media-object--large">
+                    <a class="p-media-object--large p-button--base" href={speaker.url} target="_blank">
                         <img
                             src={speaker.profileImg ? 
                                 `https://events.canonical.com/user/${speaker.profileImg}/picture-default`
@@ -58,17 +58,15 @@ featuredSpeakers.push({
                             loading="lazy"
                         />
                         <div class="p-media-object__details">
-                            <a href={speaker.url}>
-                                <h3>
-                                    {speaker.name}
-                                </h3>
-                            </a>
+                            <h3>
+                                {speaker.name}
+                            </h3>
                             <p class="p-media-object__content">
                                 {speaker.title}
                             </p>
                             <ul class="p-media-object__meta-list" />
                         </div>
-                    </div>
+                    </a>
                 </Col>
             ))
         }
@@ -82,3 +80,18 @@ featuredSpeakers.push({
     </Row>
 </Strip>
 }
+
+<style>
+    h3 {
+        color: var(--vf-color-link-default);
+    }
+
+    h3, .p-media-object__content {
+        margin-bottom: 0;
+    }
+
+    .p-button--base {
+        text-align: start;
+        justify-content: start;
+    }
+</style>
