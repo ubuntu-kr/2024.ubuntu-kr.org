@@ -42,8 +42,7 @@ const t = useTranslations(lang);
                 <!--
                 <a href={`/schedules`} class="p-button--positive">{t("nav.schedules")}</a>
                 -->
-                <Button appearance="positive" disabled>{t("nav.schedules")}</Button>
-                <a href={`/tickets`} class="p-button">{t("home.tickets")}</a>
+                <a href={`/tickets`} class="p-button--positive" target="_blank">{t("home.tickets")}</a>
                 <a href={`/${lang}/sponsors/become-a-sponsor/`} class="p-button"
                     >{t("home.sponsor")}</a
                 >
@@ -84,8 +83,4 @@ const t = useTranslations(lang);
     <Sponsors/>
 </Shell>
 
-<style>
-    button[disabled=""]{
-        opacity: .60;
-    }
-</style>
+<style></style>
