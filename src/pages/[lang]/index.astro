@@ -39,7 +39,10 @@ const t = useTranslations(lang);
         <Row>
             <Col size={3} />
             <Col size={9}>
-                <a href={`/cfp`} class="p-button--positive">{t("home.cfp")}</a>
+                <!--
+                <a href={`/schedules`} class="p-button--positive">{t("nav.schedules")}</a>
+                -->
+                <Button appearance="positive" disabled>{t("nav.schedules")}</Button>
                 <a href={`/tickets`} class="p-button">{t("home.tickets")}</a>
                 <a href={`/${lang}/sponsors/become-a-sponsor/`} class="p-button"
                     >{t("home.sponsor")}</a
