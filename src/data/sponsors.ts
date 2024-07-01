@@ -3,7 +3,7 @@ import logoPlaceHolder from "@assets/logo_placeholder.svg";
 import ubuntu from "@assets/sponsors/ubuntu.svg";
 import microsoft from "@assets/sponsors/microsoft.png";
 import nhncloud from "@assets/sponsors/nhncloud.png";
-import ahnlabCloudmate from "@assets/sponsors/ahnlab_cloudmate.png";
+import ahnlabCloudmate from "@assets/sponsors/AhnLab_CloudMate_full.svg";
 import groMetric from "@assets/sponsors/grometric.svg";
 import whaTapLabs from "@assets/sponsors/whatap.png";
 
