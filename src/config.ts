@@ -66,6 +66,10 @@ export const config = {
                     {
                         label: t('nav.socialevents'),
                         url: `/${locale}/programs/social-events`
+                    },
+                    {
+                        label: t('nav.socialevents'),
+                        url: `https://github.com/ubuntu-kr/ksp-toolkits/blob/master/ksp/ksp-20240810/readme.md`
                     }
                 ]
             },

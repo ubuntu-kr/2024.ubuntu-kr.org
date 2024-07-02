@@ -33,11 +33,12 @@ export const languages = {
       'nav.cfp': 'Call for proposals',
       'nav.schedules': 'Schedules (TBD)',
       'nav.socialevents': 'Conference Dinner',
+      'nav.ksp': 'OpenPGP Keysigning Party',
       'nav.sponsors': 'Sponsors/Patrons',
       'nav.sponsors.join': 'Become a sponsor',
       'nav.sponsors.list': 'Our sponsors',
       'sponsor.about': 'About the sponsor',
-      'sponsor.website': 'Visit website'
+      'sponsor.website': 'Visit website',
     },
     ko: {
       'event.edition': '두번째 UbuCon Korea',
@@ -66,6 +67,7 @@ export const languages = {
       'nav.cfp': '제안서 모집',
       'nav.schedules': '시간표 (미정)',
       'nav.socialevents': '컨퍼런스 만찬',
+      'nav.ksp': 'OpenPGP 키사이닝 파티',
       'nav.sponsors': '후원사/개인후원',
       'nav.sponsors.join': '후원사 등록 안내',
       'nav.sponsors.list': '참여 후원사',
