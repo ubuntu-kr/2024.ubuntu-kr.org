@@ -37,6 +37,7 @@ export const languages = {
       'nav.sponsors': 'Sponsors/Patrons',
       'nav.sponsors.join': 'Become a sponsor',
       'nav.sponsors.list': 'Our sponsors',
+      'nav.patrons': 'Individual patrons and Members with dues',
       'sponsor.about': 'About the sponsor',
       'sponsor.website': 'Visit website',
     },
@@ -71,6 +72,7 @@ export const languages = {
       'nav.sponsors': '후원사/개인후원',
       'nav.sponsors.join': '후원사 등록 안내',
       'nav.sponsors.list': '참여 후원사',
+      'nav.patrons': '개인 후원자 및 회비 회원',
       'sponsor.about': '후원사 소개',
       'sponsor.website': '웹사이트 방문'
     },
