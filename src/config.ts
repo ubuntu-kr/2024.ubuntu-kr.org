@@ -83,6 +83,10 @@ export const config = {
                     {
                         label: t('nav.sponsors.list'),
                         url: `/${locale}/sponsors/our-sponsors`
+                    },
+                    {
+                        label: t('nav.patrons'),
+                        url: `/${locale}/patrons`
                     }
                 ]
             }

@@ -1,0 +1,43 @@
+---
+layout: /src/layouts/MarkdownLayout.astro
+title: Individual Patrons and Members with dues
+---
+import { patrons, ukc } from "@data/patrons";
+import { Col, Row, Card } from "@canonical/react-components"
+
+
+## Individual patrons
+
+People listed below are Individual patrons of UbuCon Korea 2024.
+
+We got total {patrons.length} individual patron{patrons.length > 1 ? "s":""} this year!
+
+Thanks to every patrons for supporting our event!
+
+> **Note** Only patrons who agreed to display their names are displayed here.
+
+<Row>
+    {patrons.map((person) => (
+        <Col size={3}>
+            <Card title={person.name}>{person.org ?? "-"}</Card>
+        </Col>
+    ))}
+</Row>
+
+## Ubuntu Korea Community Members with dues
+
+People listed below are Ubuntu Korea Community Members with dues who bought tickets to participate in UbuCon Korea 2024. 
+
+We got total {ukc.length} participant{ukc.length > 1 ? "s":""} this year!
+
+Thanks to every members for supporting our event!
+
+> **Note** Only members who agreed to display their names are displayed here.
+
+<Row>
+    {ukc.map((person) => (
+        <Col size={3}>
+            <Card title={person.name}>{person.org ?? "-"}</Card>
+        </Col>
+    ))}
+</Row>

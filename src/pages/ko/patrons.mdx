@@ -1,0 +1,41 @@
+---
+layout: /src/layouts/MarkdownLayout.astro
+title: 개인 후원자 및 회비 회원
+---
+import { patrons, ukc } from "@data/patrons";
+import { Col, Row, Card } from "@canonical/react-components"
+
+
+## 개인 후원자
+
+금번 우부콘 코리아 2024에서는 총 {patrons.length}명의 참가자{patrons.length > 1 ? " 분들":""}께서 후원해주셨습니다!
+
+후원해주신 모든 후원자 분들께 감사드립니다!
+
+> 개인 후원자 정보 공개에 동의한 분들의 성함 및 소속만이 여기 등재됩니다.
+
+<Row>
+    {patrons.map((person) => (
+        <Col size={3}>
+            <Card title={person.name}>{person.org ?? "-"}</Card>
+        </Col>
+    ))}
+</Row>
+
+## 회비 회원
+
+아래는 본 행사를 개최하는 우분투한국커뮤니티의 회비 회원 중 행사에 참여하신 분들의 목록입니다.
+
+올해 총 {ukc.length}명의 참가자{ukc.length > 1 ? " 분들":""}께서 참여해주셨습니다!
+
+참여해주신 모든 회비 회원님께 감사드립니다.
+
+> 행사에 참여한 우분투한국커뮤니티의 회비 회원 중 정보 공개에 동의하신 분들의 성함 및 소속만이 여기 등재됩니다.
+
+<Row>
+    {ukc.map((person) => (
+        <Col size={3}>
+            <Card title={person.name}>{person.org ?? "-"}</Card>
+        </Col>
+    ))}
+</Row>
