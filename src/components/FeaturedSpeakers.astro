@@ -17,6 +17,15 @@ const featuredSessions = sessions.filter((session: any) =>
 
 const featuredSpeakers = [];
 for (const session of featuredSessions) {
+    if (session.speakers.length === 0) {
+        featuredSpeakers.push({
+            name: "TBD",
+            profileImg: null,
+            title: session.title,
+            url: session.url
+        });
+    }
+    
     for (const speaker of session.speakers) {
         const imgId = config.featuredSpeakers.speakerIds.find(
             (user) => speaker.db_id === user.db_id
@@ -24,15 +33,6 @@ for (const session of featuredSessions) {
         featuredSpeakers.push({
             name: speaker.fullName.split(",").join(" "),
             profileImg: imgId?.user,
-            title: session.title,
-            url: session.url
-        })
-    }
-
-    if (session.friendly_id === 25) {
-        featuredSpeakers.push({
-            name: "TBD",
-            profileImg: null,
             title: session.title,
             url: session.url
         })
