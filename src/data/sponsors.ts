@@ -60,7 +60,7 @@ export const sponsors = [
                 name: "안랩클라우드메이트",
                 logoUrl: ahnlabCloudmate.src,
                 url: "https://www.cloudmt.co.kr",
-                description: "AhnLab CloudMate is the certified CSP company that located in Seoul, Korea. AhnLab CloudMate provides professional managed service on cloud environment. Based on experiences from MNCs, AhnLab CloudMate has its best certified engineers and developers in the cloud sector. Through the professional managed service, AhnLab CloudMate supports systematic management and its cloud infrastructure to the customers. Furthermore, AhnLab CloudMate also offers consulting for cloud service to industries that are adapting cloud infrastructure for the first time. Lastly, With Microsoft Azure MVP, AhnLab CloudMate has been contributed educational programs and activities to various vendors and many communities for years."
+                description: "AhnLab CloudMate는 보안과 클라우드 네이티브 기술력을 바탕으로 고객이 클라우드를 안전하고 클라우드답게 사용할 수 있도록 비즈니스와 개발 환경, 보안을 모두 고려한 컨설팅, 매니지드 서비스를 제공하여 클라우드 도입 효과를 극대화합니다."
             }
         ]
     },
