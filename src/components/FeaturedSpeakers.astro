@@ -28,14 +28,16 @@ for (const session of featuredSessions) {
             url: session.url
         })
     }
-}
 
-// Keynote 관련 하드코딩
-featuredSpeakers.push({
-    name: "Utkarsh Gupta",
-    title: "Keynote",
-    url: ""
-})
+    if (session.friendly_id === 25) {
+        featuredSpeakers.push({
+            name: "TBD",
+            profileImg: null,
+            title: session.title,
+            url: session.url
+        })
+    }
+}
 
 ---
 
