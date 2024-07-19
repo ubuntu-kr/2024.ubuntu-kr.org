@@ -17,6 +17,15 @@ const featuredSessions = sessions.filter((session: any) =>
 
 const featuredSpeakers = [];
 for (const session of featuredSessions) {
+    if (session.speakers.length === 0) {
+        featuredSpeakers.push({
+            name: "TBD",
+            profileImg: null,
+            title: session.title,
+            url: session.url
+        });
+    }
+    
     for (const speaker of session.speakers) {
         const imgId = config.featuredSpeakers.speakerIds.find(
             (user) => speaker.db_id === user.db_id
@@ -29,13 +38,6 @@ for (const session of featuredSessions) {
         })
     }
 }
-
-// Keynote 관련 하드코딩
-featuredSpeakers.push({
-    name: "Utkarsh Gupta",
-    title: "Keynote",
-    url: ""
-})
 
 ---
 
