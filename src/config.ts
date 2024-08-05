@@ -64,6 +64,10 @@ export const config = {
                         url: '/schedules'
                     },
                     {
+                        label: t('nav.schedules.pdf'),
+                        url: '/docs/uck24_timetable.pdf'
+                    },
+                    {
                         label: t('nav.socialevents'),
                         url: `/${locale}/programs/social-events`
                     },
