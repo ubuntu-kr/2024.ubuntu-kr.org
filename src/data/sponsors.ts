@@ -6,6 +6,7 @@ import nhncloud from "@assets/sponsors/nhncloud.png";
 import ahnlabCloudmate from "@assets/sponsors/AhnlabCloudMate_screen.svg";
 import groMetric from "@assets/sponsors/grometric.svg";
 import whaTapLabs from "@assets/sponsors/whatap.png";
+import hanbitMedia from "@assets/sponsors/hanbit-media.svg";
 
 export const sponsors = [
     {
@@ -89,5 +90,19 @@ export const sponsors = [
         sizeOnLargeScreen: 2 as ColSize,
         sizeOnMediumScreen: 2 as ColSize,
         sizeOnSmallScreen: 1 as ColSize,
+    },
+    {
+        sponsorLevelName: "Media",
+        sizeOnLargeScreen: 2 as ColSize,
+        sizeOnMediumScreen: 2 as ColSize,
+        sizeOnSmallScreen: 1 as ColSize,
+        list: [
+            {
+                name: "한빛미디어",
+                logoUrl: hanbitMedia.src,
+                url: "https://www.hanbit.co.kr/media",
+                description: "한빛미디어(주)는 ‘책으로 여는 IT 세.상’을 만들어 갑니다. IT 세상의 주역은 ‘우리’ 입니다. 한빛미디어(주)는 IT 세상의 주역들을 위한 프로그래밍, 컴퓨터공학, IT 에세이, Make, 리얼타임(전자책), OA, 그래픽, 나와 내 아이를 위한 실용 등 다양한 분야의 책으로 IT 세상을 만들어 가고 있습니다."
+            }
+        ]
     }
 ]

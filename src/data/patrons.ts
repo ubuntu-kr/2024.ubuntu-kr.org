@@ -29,5 +29,25 @@ export const ukc = [
     {
         name: "유영재",
         org: "에이캣"
+    },
+    {
+        name: "차의서",
+        org: "우분투한국커뮤니티"
+    },
+    {
+        name: "방기연",
+        org: "C++ Korea"
+    },
+    {
+        name: "조현우",
+        org: "HyperConnect"
+    },
+    {
+        name: "이종훈",
+        org: "GNSInfo"
+    },
+    {
+        name: "이재원",
+        org: "삼일테크"
     }
 ]
