@@ -39,16 +39,9 @@ const t = useTranslations(lang);
         <Row>
             <Col size={3} />
             <Col size={9}>
-                <!--
-                <a href={`/schedules`} class="p-button--positive">{t("nav.schedules")}</a>
-                -->
-                <a href={`/tickets`} class="p-button--positive" target="_blank">{t("home.tickets")}</a>
-                <a href={`/schedules`} class="p-button"
-                    >{t("nav.schedules")}</a
-                >
-                <a href={`/${lang}/sponsors/become-a-sponsor/`} class="p-button"
-                    >{t("home.sponsor")}</a
-                >
+                <a href={`https://event-us.kr/mypage/allevent`} class="p-button--positive" target="_blank">{t("home.tickets")}</a>
+                <a href={`/schedules`} class="p-button" target="_blank">{t("nav.schedules")}</a>
+                <a href={`/docs/uck24_timetable.pdf`} class="p-button" target="_blank">{t("nav.schedules.pdf")}</a>
             </Col>
         </Row>
         <Row>
